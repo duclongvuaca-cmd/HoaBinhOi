@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getPoi, getPois } from "@/lib/data";
+
+export const revalidate = 60;
 import { CATEGORY_META } from "@/lib/types";
 import { createClient } from "@/lib/supabase-server";
 import { PoiMiniMap } from "@/components/poi-mini-map";

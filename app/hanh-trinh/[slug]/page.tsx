@@ -3,6 +3,8 @@ import Link from "next/link";
 import { getItinerary, getPoi, getItineraries } from "@/lib/data";
 import { ItineraryMap } from "@/components/itinerary-map";
 
+export const revalidate = 60;
+
 export async function generateStaticParams() {
   const items = await getItineraries();
   return items.map((it) => ({ slug: it.slug }));

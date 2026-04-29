@@ -1,3 +1,5 @@
+export const revalidate = 60;
+
 import { getPois } from "@/lib/data";
 import { MapView } from "@/components/map-view";
 

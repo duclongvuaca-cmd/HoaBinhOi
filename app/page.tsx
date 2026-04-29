@@ -1,3 +1,5 @@
+export const revalidate = 60;
+
 import { Hero } from "@/components/hero";
 import { ItineraryPreview } from "@/components/itinerary-preview";
 import { POIGrid } from "@/components/poi-grid";
