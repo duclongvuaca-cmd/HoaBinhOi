@@ -9,10 +9,16 @@ export function Nav() {
         </Link>
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-700">
           <Link href="/cam-nang/long-ho" className="hover:text-brand-600">🛥️ Lòng hồ</Link>
-          <Link href="/cam-nang/dap-thuy-dien" className="hover:text-brand-600">🏗️ Đập thuỷ điện</Link>
-          <Link href="/qua-giang-tay-bac" className="hover:text-brand-600">🛣️ Quá giang Tây Bắc</Link>
-          <Link href="/ke-hoach" className="hover:text-brand-600">🤖 AI Plan</Link>
+          <Link href="/cam-nang/dap-thuy-dien" className="hover:text-brand-600">🏗️ Đập</Link>
+          <Link href="/qua-giang-tay-bac" className="hover:text-brand-600">🛣️ Quá giang</Link>
           <Link href="/hanh-trinh" className="hover:text-brand-600">Hành trình</Link>
+          <Link href="/an" className="hover:text-brand-600">Ăn</Link>
+          <Link href="/mua" className="hover:text-brand-600">Mua</Link>
+          <Link href="/nghi" className="hover:text-brand-600">Nghỉ</Link>
+          <Link href="/choi" className="hover:text-brand-600">Trải nghiệm</Link>
+          <Link href="/diem-den" className="hover:text-brand-600">Điểm đến</Link>
+          <Link href="/ke-hoach" className="hover:text-brand-600">🤖 AI</Link>
+          <Link href="/nhan-dien" className="hover:text-brand-600">📸</Link>
           <Link href="/ban-do" className="px-3 py-1.5 bg-brand-600 text-white rounded-md hover:bg-brand-700">
             Bản đồ
           </Link>
