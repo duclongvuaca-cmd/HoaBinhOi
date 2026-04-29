@@ -21,7 +21,8 @@
     "expand-images": "tsx --env-file=.env.local scripts/expand-images.ts",
     "gen-images-google": "tsx --env-file=.env.local scripts/gen-images-google.ts",
     "gen-images-pexels": "tsx --env-file=.env.local scripts/gen-images-pexels.ts",
-    "recommend-restaurants": "tsx --env-file=.env.local scripts/recommend-restaurants.ts"
+    "recommend-restaurants": "tsx --env-file=.env.local scripts/recommend-restaurants.ts",
+    "fetch-gmaps-reviews": "tsx --env-file=.env.local scripts/fetch-gmaps-reviews.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.0",

@@ -9,6 +9,7 @@ import { createClient } from "@/lib/supabase-server";
 import { PoiMiniMap } from "@/components/poi-mini-map";
 import { ReviewForm } from "@/components/review-form";
 import { ReviewList } from "@/components/review-list";
+import { GmapsReviews } from "@/components/gmaps-reviews";
 
 export async function generateStaticParams() {
   const pois = await getPois();
@@ -155,13 +156,19 @@ export default async function PoiDetailPage({ params }: { params: Promise<{ slug
 
             <div>
               <h2 className="font-display text-2xl mb-3">Đánh giá</h2>
+              <GmapsReviews
+                rating={(poi as any).gmaps_rating ?? null}
+                count={(poi as any).gmaps_review_count ?? null}
+                reviews={(poi as any).gmaps_reviews ?? null}
+              />
               {poiId && (
-                <>
+                <div className="mt-4">
+                  <h3 className="font-display text-lg mb-2 text-slate-700">Đánh giá từ khách</h3>
                   <ReviewList poiId={poiId} />
                   <div className="mt-4">
                     <ReviewForm poiSlug={slug} />
                   </div>
-                </>
+                </div>
               )}
             </div>
           </div>

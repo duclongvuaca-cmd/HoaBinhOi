@@ -1,7 +1,7 @@
 export const revalidate = 60;
 
 import { getPois } from "@/lib/data";
-import { MapView } from "@/components/map-view";
+import { GmapsView } from "@/components/gmaps-view";
 
 export const metadata = { title: "Bản đồ Hoà Bình — Hoà Bình Ơi" };
 
@@ -18,7 +18,7 @@ export default async function MapPage() {
 
       <section className="px-6 py-8">
         <div className="max-w-6xl mx-auto">
-          <MapView pois={pois} />
+          <GmapsView pois={pois} />
         </div>
       </section>
     </main>
