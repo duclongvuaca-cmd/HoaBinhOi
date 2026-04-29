@@ -11,7 +11,13 @@
     "seed": "tsx --env-file=.env.local scripts/seed-pois.ts",
     "seed:itineraries": "tsx --env-file=.env.local scripts/seed-itineraries.ts",
     "ingest-gmaps": "tsx --env-file=.env.local scripts/ingest-gmaps.ts",
-    "dev-login": "tsx --env-file=.env.local scripts/dev-login.ts"
+    "dev-login": "tsx --env-file=.env.local scripts/dev-login.ts",
+    "setup-storage": "tsx --env-file=.env.local scripts/setup-storage.ts",
+    "add-pois-extra": "tsx --env-file=.env.local scripts/add-pois-extra.ts",
+    "gen-images": "tsx --env-file=.env.local scripts/gen-images.ts",
+    "set-curated": "tsx --env-file=.env.local scripts/set-curated-images.ts",
+    "reset-images": "tsx --env-file=.env.local scripts/reset-images.ts",
+    "check-images": "tsx --env-file=.env.local scripts/check-images.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.0",
