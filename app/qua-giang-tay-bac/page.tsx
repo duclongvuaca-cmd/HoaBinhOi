@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getPoi } from "@/lib/data";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Quá giang Tây Bắc — dừng chân Hoà Bình QL6 | Hoà Bình Ơi",
@@ -13,7 +16,14 @@ export const metadata: Metadata = {
 
 const HERO = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Nh%C3%A0_m%C3%A1y_Th%E1%BB%A7y_%C4%91i%E1%BB%87n_H%C3%B2a_B%C3%ACnh.jpg/1920px-Nh%C3%A0_m%C3%A1y_Th%E1%BB%A7y_%C4%91i%E1%BB%87n_H%C3%B2a_B%C3%ACnh.jpg";
 
-export default function QuaGiangTayBac() {
+export default async function QuaGiangTayBac() {
+  const slugs = ["thuy-dien-hoa-binh", "vua-ca-long-phuong", "ban-lac-mai-chau", "cam-cao-phong", "long-ho-hoa-binh", "serena-resort-kim-boi"];
+  const pois = await Promise.all(slugs.map((s) => getPoi(s)));
+  const galleryUrls: string[] = [];
+  for (const p of pois) {
+    if (p?.images?.[0]) galleryUrls.push(p.images[0]);
+  }
+
   return (
     <main>
       <section className="relative overflow-hidden text-white">
@@ -30,6 +40,25 @@ export default function QuaGiangTayBac() {
           </p>
         </div>
       </section>
+
+      {galleryUrls.length > 0 && (
+        <section className="py-8 px-6 bg-slate-50">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="font-display text-2xl text-brand-900 mb-4 text-center">6 điểm dừng dọc QL6</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {galleryUrls.slice(0, 6).map((src, i) => (
+                <div key={i} className="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-200 group">
+                  <img src={src} alt={pois[i]?.name || ""} className="w-full h-full object-cover group-hover:scale-105 transition" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-3 text-white">
+                    <div className="font-medium text-sm drop-shadow">{pois[i]?.name}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <article className="prose prose-slate max-w-3xl mx-auto px-6 py-12 prose-headings:font-display prose-a:text-brand-700">
         <h2>Vì sao phải dừng Hoà Bình?</h2>

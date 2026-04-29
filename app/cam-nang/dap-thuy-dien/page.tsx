@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getPoi } from "@/lib/data";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Cẩm nang Đập thuỷ điện Hoà Bình — lịch sử, vé, tour | Hoà Bình Ơi",
@@ -13,7 +16,10 @@ export const metadata: Metadata = {
 
 const HERO = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Nh%C3%A0_m%C3%A1y_Th%E1%BB%A7y_%C4%91i%E1%BB%87n_H%C3%B2a_B%C3%ACnh.jpg/1920px-Nh%C3%A0_m%C3%A1y_Th%E1%BB%A7y_%C4%91i%E1%BB%87n_H%C3%B2a_B%C3%ACnh.jpg";
 
-export default function CamNangDap() {
+export default async function CamNangDap() {
+  const poi = await getPoi("thuy-dien-hoa-binh");
+  const galleryUrls = (poi?.images || []).slice(0, 8);
+
   return (
     <main>
       <section className="relative overflow-hidden text-white">
@@ -28,6 +34,20 @@ export default function CamNangDap() {
           </p>
         </div>
       </section>
+
+      {galleryUrls.length > 0 && (
+        <section className="py-8 px-6 bg-slate-50">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {galleryUrls.map((src: string, i: number) => (
+                <a key={i} href={src} target="_blank" rel="noopener" className="block aspect-square overflow-hidden rounded-xl bg-slate-200">
+                  <img src={src} alt="Đập thuỷ điện Hoà Bình" className="w-full h-full object-cover hover:scale-105 transition" />
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <article className="prose prose-slate max-w-3xl mx-auto px-6 py-12 prose-headings:font-display prose-a:text-brand-700">
         <h2>Tổng quan</h2>
