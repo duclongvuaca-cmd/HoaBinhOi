@@ -14,7 +14,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${base}/diem-den`, changeFrequency: "weekly" as const, priority: 0.8, lastModified: now },
     { url: `${base}/su-kien`, changeFrequency: "weekly" as const, priority: 0.7, lastModified: now },
     { url: `${base}/ban-do`, changeFrequency: "monthly" as const, priority: 0.7, lastModified: now },
-    { url: `${base}/hanh-trinh`, changeFrequency: "weekly" as const, priority: 0.9, lastModified: now }
+    { url: `${base}/hanh-trinh`, changeFrequency: "weekly" as const, priority: 0.9, lastModified: now },
+    { url: `${base}/cam-nang/long-ho`, changeFrequency: "monthly" as const, priority: 0.95, lastModified: now },
+    { url: `${base}/cam-nang/dap-thuy-dien`, changeFrequency: "monthly" as const, priority: 0.95, lastModified: now },
+    { url: `${base}/qua-giang-tay-bac`, changeFrequency: "monthly" as const, priority: 0.9, lastModified: now },
+    { url: `${base}/ke-hoach`, changeFrequency: "monthly" as const, priority: 0.8, lastModified: now },
+    { url: `${base}/nhan-dien`, changeFrequency: "monthly" as const, priority: 0.6, lastModified: now }
   ];
 
   const pois = await getPois();

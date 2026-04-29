@@ -12,13 +12,13 @@ const beVietnam = Be_Vietnam_Pro({
 });
 
 export const metadata: Metadata = {
-  title: "Hoà Bình Ơi — Du lịch phường Hoà Bình",
+  title: "Hoà Bình Ơi — Lòng hồ · Đập thuỷ điện · Cửa ngõ Tây Bắc",
   description:
-    "Khám phá Hoà Bình theo cách người địa phương: hành trình chọn sẵn, ăn gì - mua gì - nghỉ ở đâu, kèm bí quyết.",
+    "Điểm dừng đẹp nhất trên đường Hà Nội ↔ Mộc Châu / Mai Châu / Sơn La. Lòng hồ Sông Đà, Đập thuỷ điện, Thác Bờ, bí quyết người bản địa.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://hoabinhoi.vn"),
   openGraph: {
-    title: "Hoà Bình Ơi",
-    description: "Du lịch phường Hoà Bình — hành trình chọn sẵn, bí quyết người bản địa",
+    title: "Hoà Bình Ơi — Cửa ngõ Tây Bắc",
+    description: "Lòng hồ · Đập thuỷ điện · Điểm dừng QL6 đi Mộc Châu / Mai Châu / Sơn La",
     locale: "vi_VN",
     type: "website"
   }

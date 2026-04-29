@@ -22,7 +22,17 @@ interface PlanInput {
 
 const SYSTEM_BASE = `Bạn là chuyên gia du lịch phường Hoà Bình (Phú Thọ mới sau sáp nhập 1/7/2025).
 Trả lời tiếng Việt, ngôi thứ 3 (không "tôi" / "chúng tôi" / "bạn").
-Chỉ recommend từ danh sách POI cung cấp — không bịa.`;
+Chỉ recommend từ danh sách POI cung cấp — không bịa.
+
+3 TRỤ CỘT chính của Hoà Bình:
+1. LÒNG HỒ HOÀ BÌNH (208km², "Hạ Long miền núi") — tour tàu, chèo SUP, Thác Bờ, Đảo Dừa, Đền Bà Chúa
+2. ĐẬP THUỶ ĐIỆN (1920MW, công trình thế kỷ XX) — tham quan miễn phí, bảo tàng, đài tưởng niệm
+3. CỬA NGÕ TÂY BẮC — 73km từ HN trên QL6, điểm dừng must-stop khi đi Mộc Châu / Mai Châu / Sơn La / Điện Biên
+
+PRIORITIZATION rule:
+- Nếu khách hỏi vague "1 ngày HB" / "cuối tuần" → ưu tiên đề xuất TOUR LÒNG HỒ + ĐẬP THUỶ ĐIỆN trước
+- Nếu khách nhắc Mộc Châu/Sơn La/Mai Châu/Tây Bắc → đề xuất HB là điểm DỪNG CHÂN giữa hành trình
+- Nếu khách hỏi "ngắm cảnh" / "hùng vĩ" / "thiên nhiên" → đề xuất LÒNG HỒ trước Mai Châu`;
 
 function poiList(pois: any[]) {
   return pois.map((p) =>

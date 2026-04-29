@@ -17,14 +17,17 @@ export function Hero() {
       </div>
       <div className="relative max-w-6xl mx-auto px-6 py-24 md:py-32">
         <p className="text-sm uppercase tracking-widest text-sun-200 mb-4">
-          Phường Hoà Bình · Tỉnh Phú Thọ
+          Phường Hoà Bình · Tỉnh Phú Thọ · Cửa ngõ Tây Bắc
         </p>
-        <h1 className="font-display text-5xl md:text-7xl leading-tight mb-6 drop-shadow-lg">
+        <h1 className="font-display text-5xl md:text-7xl leading-tight mb-4 drop-shadow-lg">
           Hoà Bình Ơi
         </h1>
-        <p className="text-xl md:text-2xl max-w-2xl mb-8 text-brand-50 drop-shadow">
-          Cuối tuần thoát Hà Nội — về với <b>Đập thuỷ điện</b>, <b>Thác Bờ</b>, lòng hồ Sông Đà,
-          và bí quyết người bản địa không có trên Google.
+        <p className="font-display text-2xl md:text-3xl max-w-3xl mb-4 text-sun-200 drop-shadow">
+          Lòng hồ · Đập thuỷ điện · Cửa ngõ Tây Bắc
+        </p>
+        <p className="text-lg md:text-xl max-w-2xl mb-8 text-brand-50 drop-shadow">
+          Điểm dừng đẹp nhất trên đường Hà Nội ↔ <b>Mộc Châu / Mai Châu / Sơn La</b>.
+          73km từ HN — đến rồi không vội đi.
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
@@ -41,10 +44,10 @@ export function Hero() {
           </Link>
         </div>
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <Stat n="73km" label="cách Hà Nội" />
-          <Stat n="79K" label="dân phường" />
-          <Stat n="30+" label="điểm đến" />
-          <Stat n="5" label="hành trình curated" />
+          <Stat n="73km" label="từ Hà Nội (1.5h)" />
+          <Stat n="208km²" label="lòng hồ Sông Đà" />
+          <Stat n="1920MW" label="đập thuỷ điện" />
+          <Stat n="30+" label="điểm dừng chân" />
         </div>
       </div>
     </section>
