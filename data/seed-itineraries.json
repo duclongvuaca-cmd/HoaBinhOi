@@ -1,0 +1,97 @@
+[
+  {
+    "slug": "cuoi-tuan-lang-man",
+    "title": "Cuối tuần lãng mạn 2N1Đ",
+    "persona": "Cặp đôi 25-35 tuổi",
+    "duration": "2 ngày 1 đêm",
+    "budget_low": 1800000,
+    "budget_high": 2500000,
+    "hero_color": "from-brand-500 to-brand-700",
+    "highlights": ["Ăn cá lăng sông Đà", "Du thuyền hồ HB", "Suối khoáng Kim Bôi"],
+    "description": "2 ngày tách Hà Nội cho cặp đôi muốn vừa lãng mạn vừa được trải nghiệm địa phương. Cá lăng tươi sông Đà buổi tối, sáng hôm sau ngâm khoáng nóng, chiều đi thuyền hồ HB ngắm hoàng hôn.",
+    "stops": [
+      { "start_time": "08:00", "end_time": "10:00", "poi_slug": "thuy-dien-hoa-binh", "note": "Đi từ HN, dừng tham quan thuỷ điện. Ánh sáng buổi sáng đẹp." },
+      { "start_time": "12:00", "end_time": "14:00", "poi_slug": "vua-ca-long-phuong", "note": "Trưa tại Vua Cá. Đặt cá lăng nướng + lẩu măng chua." },
+      { "start_time": "15:00", "end_time": "18:00", "poi_slug": "thac-bo", "note": "Du thuyền từ Thung Nai ra Thác Bờ. Xem hoàng hôn trên hồ." },
+      { "start_time": "19:00", "end_time": "21:00", "poi_slug": "khach-san-hoa-binh-2", "note": "Check-in. Ăn nhẹ tại khách sạn hoặc gọi đồ ăn." },
+      { "start_time": "08:00", "end_time": "11:00", "poi_slug": "suoi-kim-boi", "note": "Ngày 2 — ngâm suối khoáng. Chọn V'Resort hoặc Serena." },
+      { "start_time": "12:30", "end_time": "14:00", "poi_slug": "vua-ca-long-phuong", "note": "Trưa quay lại Vua Cá thử lẩu cá ngạnh. Khác cá lăng hôm trước." },
+      { "start_time": "15:00", "end_time": "16:00", "poi_slug": "cam-cao-phong", "note": "Mua cam Cao Phong + mật ong làm quà về HN." }
+    ]
+  },
+  {
+    "slug": "gia-dinh-2-ngay",
+    "title": "Gia đình 2 ngày",
+    "persona": "Có trẻ em + ông bà",
+    "duration": "2 ngày 1 đêm",
+    "budget_low": 1200000,
+    "budget_high": 1800000,
+    "hero_color": "from-sun-500 to-sun-700",
+    "highlights": ["Thuỷ điện HB", "Bản Lác Mai Châu", "Cơm lam + lợn mán"],
+    "description": "Hành trình phù hợp gia đình 4-6 người với trẻ em + ông bà. Đường không phải đi xa, hoạt động không quá tốn sức, ăn các món truyền thống dễ ăn.",
+    "stops": [
+      { "start_time": "08:30", "end_time": "10:30", "poi_slug": "thuy-dien-hoa-binh", "note": "Tham quan đập + bảo tàng. Trẻ em thích xem turbine." },
+      { "start_time": "12:00", "end_time": "13:30", "poi_slug": "vua-ca-long-phuong", "note": "Trưa cá sông Đà. Có món cơm lam cho ông bà." },
+      { "start_time": "14:30", "end_time": "17:30", "poi_slug": "ban-lac-mai-chau", "note": "Đi Mai Châu (~60km). Đạp xe quanh bản, xem dệt thổ cẩm." },
+      { "start_time": "18:30", "end_time": "21:00", "poi_slug": "ban-lac-mai-chau", "note": "Tối ăn cơm lam + lợn mán + xôi nếp nương tại nhà sàn. Ngủ homestay." },
+      { "start_time": "08:00", "end_time": "10:00", "poi_slug": "ban-lac-mai-chau", "note": "Ngày 2 — ngắm ruộng lúa buổi sáng. Mua thổ cẩm." },
+      { "start_time": "12:00", "end_time": "13:30", "poi_slug": "cam-cao-phong", "note": "Trên đường về dừng vườn cam Cao Phong. Mua quà." }
+    ]
+  },
+  {
+    "slug": "active-foodie",
+    "title": "Active Foodie 1 ngày",
+    "persona": "Active 25-40 tuổi",
+    "duration": "1 ngày",
+    "budget_low": 500000,
+    "budget_high": 800000,
+    "hero_color": "from-brand-600 to-sun-500",
+    "highlights": ["Pickleball sáng", "Foodie tour chiều", "Cá sông Đà tối"],
+    "description": "Cho người HN muốn 1 ngày active — đánh pickleball buổi sáng, ăn ngon buổi chiều, về tối. Combo đặc trưng cluster Long Phượng.",
+    "stops": [
+      { "start_time": "07:30", "end_time": "10:00", "poi_slug": "long-phuong-pickleball", "note": "Đến từ HN sớm, đánh 2-3 trận. Có thể thuê vợt nếu chưa quen." },
+      { "start_time": "10:30", "end_time": "11:30", "poi_slug": "vua-ca-long-phuong", "note": "Cách 310m từ sân pickleball. Cà phê trong lúc nghỉ." },
+      { "start_time": "12:00", "end_time": "14:00", "poi_slug": "vua-ca-long-phuong", "note": "Trưa cá lăng + lẩu cá ngạnh. Phục hồi năng lượng." },
+      { "start_time": "15:00", "end_time": "17:00", "poi_slug": "thuy-dien-hoa-binh", "note": "Đi bộ thuỷ điện sau ăn. View đẹp." },
+      { "start_time": "17:30", "end_time": "18:30", "poi_slug": "cam-cao-phong", "note": "Mua cam + mật ong trên đường về HN." }
+    ]
+  },
+  {
+    "slug": "trekking-relax",
+    "title": "Trekking + Relax 2N1Đ",
+    "persona": "Bạn bè 25-35 tuổi",
+    "duration": "2 ngày 1 đêm",
+    "budget_low": 1500000,
+    "budget_high": 2000000,
+    "hero_color": "from-brand-700 to-brand-500",
+    "highlights": ["Trekking Mai Châu", "Đạp xe bản Lác", "Suối khoáng"],
+    "description": "Cho nhóm bạn 4-8 người muốn vận động + thư giãn. Ngày 1 trekking + đạp xe ở Mai Châu, ngày 2 ngâm khoáng Kim Bôi. Cân bằng active + chill.",
+    "stops": [
+      { "start_time": "08:00", "end_time": "10:30", "poi_slug": "ban-lac-mai-chau", "note": "Đến Mai Châu. Thuê xe đạp 30k/ngày." },
+      { "start_time": "10:30", "end_time": "13:00", "poi_slug": "ban-lac-mai-chau", "note": "Đạp xe quanh bản, ruộng lúa, leo lên đồi ngắm thung lũng." },
+      { "start_time": "13:30", "end_time": "15:00", "poi_slug": "ban-lac-mai-chau", "note": "Trưa cơm lam + lợn mán tại nhà sàn." },
+      { "start_time": "16:00", "end_time": "18:00", "poi_slug": "ban-lac-mai-chau", "note": "Trekking nhẹ lên đỉnh đồi gần bản. Hoàng hôn thung lũng." },
+      { "start_time": "19:00", "end_time": "22:00", "poi_slug": "ban-lac-mai-chau", "note": "Tối — múa sạp + uống rượu cần với chủ nhà sàn." },
+      { "start_time": "09:00", "end_time": "12:00", "poi_slug": "suoi-kim-boi", "note": "Ngày 2 — đi Kim Bôi ngâm suối khoáng. V'Resort phù hợp nhóm." },
+      { "start_time": "13:00", "end_time": "14:30", "poi_slug": "vua-ca-long-phuong", "note": "Trưa cuối hành trình tại Vua Cá. Cá sông Đà tươi." }
+    ]
+  },
+  {
+    "slug": "ngan-sach-thap",
+    "title": "Ngân sách thấp 1 ngày",
+    "persona": "Sinh viên / nhóm bạn",
+    "duration": "1 ngày",
+    "budget_low": 300000,
+    "budget_high": 500000,
+    "hero_color": "from-slate-500 to-slate-700",
+    "highlights": ["Đi xe máy", "Ăn quán địa phương", "Hồ HB ngắm hoàng hôn"],
+    "description": "Cho sinh viên hoặc nhóm bạn ngân sách hẹp. Đi xe máy từ HN, ăn quán bình dân, không tốn tiền vé tham quan đắt.",
+    "stops": [
+      { "start_time": "07:00", "end_time": "09:00", "poi_slug": "thuy-dien-hoa-binh", "note": "Đi xe máy QL6 từ HN. Tham quan thuỷ điện free." },
+      { "start_time": "11:30", "end_time": "13:00", "poi_slug": "vua-ca-long-phuong", "note": "Trưa — gọi món bình dân của Vua Cá (~150k/người)." },
+      { "start_time": "14:00", "end_time": "16:30", "poi_slug": "thac-bo", "note": "Có thể đi thuyền giá tiết kiệm nếu ghép đoàn." },
+      { "start_time": "17:30", "end_time": "19:00", "poi_slug": "thac-bo", "note": "Hoàng hôn trên hồ Hoà Bình từ bến. Free." },
+      { "start_time": "19:30", "end_time": "21:00", "poi_slug": "vua-ca-long-phuong", "note": "Tối ăn nhẹ. Về HN qua đêm hoặc về luôn nếu kịp." }
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "name": "hoabinh-oi",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hoà Bình Ơi — du lịch phường Hoà Bình (Phú Thọ mới). Tách biệt hoàn toàn với SOTA House.",
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "lint": "next lint",
+    "seed": "tsx --env-file=.env.local scripts/seed-pois.ts",
+    "seed:itineraries": "tsx --env-file=.env.local scripts/seed-itineraries.ts",
+    "ingest-gmaps": "tsx --env-file=.env.local scripts/ingest-gmaps.ts",
+    "dev-login": "tsx --env-file=.env.local scripts/dev-login.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.0",
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.46.0",
+    "lucide-react": "^0.460.0",
+    "mapbox-gl": "^3.8.0",
+    "next": "15.5.4",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-map-gl": "^7.1.7"
+  },
+  "devDependencies": {
+    "@types/mapbox-gl": "^3.4.1",
+    "@types/node": "^22.9.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.20",
+    "dotenv": "^17.4.2",
+    "eslint": "^9.15.0",
+    "eslint-config-next": "15.5.4",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
