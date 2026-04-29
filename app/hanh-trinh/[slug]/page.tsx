@@ -27,6 +27,10 @@ export default async function ItineraryDetail({
     }))
   );
 
+  const heroImage =
+    stops.find((s) => s.poi?.images?.[0])?.poi?.images?.[0] ||
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Nh%C3%A0_m%C3%A1y_Th%E1%BB%A7y_%C4%91i%E1%BB%87n_H%C3%B2a_B%C3%ACnh.jpg/1280px-Nh%C3%A0_m%C3%A1y_Th%E1%BB%A7y_%C4%91i%E1%BB%87n_H%C3%B2a_B%C3%ACnh.jpg";
+
   // Group stops into days based on time order (when start_time decreases, new day)
   const days: typeof stops[] = [];
   let currentDay: typeof stops = [];
@@ -43,13 +47,16 @@ export default async function ItineraryDetail({
 
   return (
     <main>
-      <section className={`bg-gradient-to-br ${it.hero_color} text-white py-16 px-6`}>
-        <div className="max-w-4xl mx-auto">
-          <Link href="/hanh-trinh" className="text-sm text-white/80 hover:text-white">
+      <section className="relative overflow-hidden text-white">
+        <img src={heroImage} alt={it.title} className="absolute inset-0 w-full h-full object-cover" />
+        <div className={`absolute inset-0 bg-gradient-to-br ${it.hero_color} opacity-80`} />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+        <div className="relative max-w-4xl mx-auto py-20 px-6">
+          <Link href="/hanh-trinh" className="text-sm text-white/80 hover:text-white drop-shadow">
             ← Hành trình
           </Link>
-          <h1 className="font-display text-5xl mt-3 mb-3">{it.title}</h1>
-          <p className="text-xl mb-4 opacity-90">{it.persona}</p>
+          <h1 className="font-display text-5xl mt-3 mb-3 drop-shadow-lg">{it.title}</h1>
+          <p className="text-xl mb-4 opacity-90 drop-shadow">{it.persona}</p>
           <div className="flex flex-wrap gap-3 text-sm">
             <span className="bg-white/20 backdrop-blur px-3 py-1.5 rounded">⏱️ {it.duration}</span>
             <span className="bg-white/20 backdrop-blur px-3 py-1.5 rounded">
@@ -99,15 +106,22 @@ export default async function ItineraryDetail({
                     {s.poi ? (
                       <Link
                         href={`/poi/${s.poi.slug}`}
-                        className="block bg-white border border-slate-200 hover:border-brand-400 rounded-lg p-4 transition"
+                        className="flex gap-3 bg-white border border-slate-200 hover:border-brand-400 rounded-lg overflow-hidden transition"
                       >
-                        <h3 className="font-display text-lg text-brand-700">{s.poi.name}</h3>
-                        {s.poi.address && (
-                          <p className="text-xs text-slate-500 mt-1">📍 {s.poi.address}</p>
+                        {s.poi.images?.[0] && (
+                          <div className="w-24 h-24 sm:w-32 sm:h-32 shrink-0 bg-slate-100">
+                            <img src={s.poi.images[0]} alt={s.poi.name} className="w-full h-full object-cover" />
+                          </div>
                         )}
-                        {s.note && (
-                          <p className="text-sm text-slate-700 mt-2 italic">"{s.note}"</p>
-                        )}
+                        <div className="flex-1 p-3 min-w-0">
+                          <h3 className="font-display text-lg text-brand-700 truncate">{s.poi.name}</h3>
+                          {s.poi.address && (
+                            <p className="text-xs text-slate-500 mt-1 truncate">📍 {s.poi.address}</p>
+                          )}
+                          {s.note && (
+                            <p className="text-sm text-slate-700 mt-1 italic line-clamp-2">"{s.note}"</p>
+                          )}
+                        </div>
                       </Link>
                     ) : (
                       <div className="text-slate-400 italic">POI không tìm thấy: {s.poi_slug}</div>
