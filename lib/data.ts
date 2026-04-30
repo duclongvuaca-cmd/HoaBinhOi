@@ -14,16 +14,38 @@ function sb() {
   return createClient(url, key, { auth: { persistSession: false } });
 }
 
+const FEATURED_ORDER = [
+  "vua-ca-long-phuong",
+  "sojo-hotel-hoa-binh",
+  "muong-thanh-hoa-binh",
+  "nem-chua-ran-caption"
+];
+
+function sortFeaturedFirst(pois: POI[]): POI[] {
+  return [...pois].sort((a, b) => {
+    const ai = FEATURED_ORDER.indexOf(a.slug);
+    const bi = FEATURED_ORDER.indexOf(b.slug);
+    if (ai >= 0 && bi >= 0) return ai - bi;
+    if (ai >= 0) return -1;
+    if (bi >= 0) return 1;
+    const af = a.tags?.includes("featured") ? 1 : 0;
+    const bf = b.tags?.includes("featured") ? 1 : 0;
+    if (af !== bf) return bf - af;
+    return (a.name || "").localeCompare(b.name || "", "vi");
+  });
+}
+
 export async function getPois(category?: Category): Promise<POI[]> {
   const client = sb();
   if (client) {
     let q = client.from("pois").select("*").eq("status", "published");
     if (category) q = q.eq("category", category);
     const { data, error } = await q;
-    if (!error && data && data.length > 0) return data as POI[];
+    if (!error && data && data.length > 0) return sortFeaturedFirst(data as POI[]);
   }
   const local = seedPois as POI[];
-  return category ? local.filter(p => p.category === category) : local;
+  const filtered = category ? local.filter(p => p.category === category) : local;
+  return sortFeaturedFirst(filtered);
 }
 
 export async function getPoi(slug: string): Promise<POI | null> {

@@ -14,6 +14,8 @@
     "dev-login": "tsx --env-file=.env.local scripts/dev-login.ts",
     "setup-storage": "tsx --env-file=.env.local scripts/setup-storage.ts",
     "add-pois-extra": "tsx --env-file=.env.local scripts/add-pois-extra.ts",
+    "add-pois-batch2": "tsx --env-file=.env.local scripts/add-pois-batch2.ts",
+    "add-pois-batch3": "tsx --env-file=.env.local scripts/add-pois-batch3.ts",
     "gen-images": "tsx --env-file=.env.local scripts/gen-images.ts",
     "set-curated": "tsx --env-file=.env.local scripts/set-curated-images.ts",
     "reset-images": "tsx --env-file=.env.local scripts/reset-images.ts",
